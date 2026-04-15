@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama ER - Retail Simple</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        .header { text-align: center; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .mermaid { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #333; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🛍️ Diagrama de Relaciones - Retail Simple</h1>
+        <p>ER limpio Mermaid.js. Relaciones básicas ventas/productos.</p>
+    </div>
+    <div class="mermaid">
+        erDiagram
+            REGION ||--o{ CIUDAD : ""
+            DEPARTAMENTO ||--o{ EMPLEADOS : ""
+            CATEGORIA ||--o{ PRODUCTOS : "categoría"
+            PRODUCTOS ||--o{ DETALLE_VENTA : "detalle"
+            PRODUCTOS ||--o{ AUDITORIA_PRECIOS : "cambios precio"
+            CLIENTES ||--o{ VENTAS : "cliente"
+            EMPLEADOS ||--o{ VENTAS : "vendedor"
+            CIUDAD ||--o{ VENTAS : "ciudad"
+            VENTAS ||--o{ DETALLE_VENTA : "items"
+    </div>
+    <script>mermaid.initialize({startOnLoad:true, theme: 'base'});</script>
+</body>
+</html>
+

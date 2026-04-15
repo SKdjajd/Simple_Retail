@@ -1,0 +1,42 @@
+# 🛍️ Retail Simple (Versión Corregida)
+
+[![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Multi-DB](https://img.shields.io/badge/DB-Multi-orange.svg)]()
+
+## 📋 Descripción
+Retail básico: Productos, Ventas, Clientes, Empleados, Auditoría precios. **FIX**: Tipos datos (INT/DECIMAL).
+
+## 🚀 Requisitos
+Oracle/SQL Server/PG/MySQL.
+
+## 📖 Pasos
+
+### 1. DDL
+```bash
+sqlplus @schema_universal.sql
+```
+
+### 2. Demo
+```bash
+@demo_practica.sql
+```
+Muestra ventas, cambios precio, stock.
+
+### 3. Queries
+```sql
+SELECT p.Nombre, p.Stock_Actual, p.Precio_unitario FROM Productos p ORDER BY p.Precio_unitario;
+-- Ventas por Cliente
+SELECT c.Nombre, COUNT(v.ID_venta) FROM Clientes c JOIN Ventas v ON c.ID_CLI = v.Clientes_ID_CLI GROUP BY c.Nombre;
+```
+
+## 🛠️ Mejoras
+- Implementar triggers reales para stock/auditoría.
+
+## 📊 Estructura
+```
+Productos → Ventas/Detalle_venta
+Clientes/Empleados → Ventas
+```
+
+**GitHub Ready!**
+
