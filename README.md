@@ -34,9 +34,6 @@ SELECT c.Nombre, COUNT(v.ID_venta) FROM Clientes c JOIN Ventas v ON c.ID_CLI = v
 
 ## 📊 Diagrama ER Interactivo
 Abre [`diagrama_relaciones.html`](diagrama_relaciones.html):
-
-[![ER Simple](https://mermaid.ink/img/pako:eNp1VUlt2zAQhP9Kz1kSWLuSUweXMXMhUllMYtYl__cKaEFg_6mJ-gwFBr0KrtxDqZo9g9gWvS-wBlvXOn9sYgSqqDwtZ3wtR7B7JuSqVoNqwzZ8xDypfIzyzEuwCtSDrYWcRfXkv5aU3T6_7fV3__L8JqQ4euT4gOKL4r__fziv4rA)]
-
 **Visualiza relaciones** en browser.
 
 
